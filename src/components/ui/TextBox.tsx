@@ -19,7 +19,7 @@ const TextBox = (props:IInputProps) => {
       value={props?.value}           
       placeholder={props?.placeholder} 
       onChange={props.onChange}
-      name={props?.name}  
+      name={props?.name}       
     >            
     </textarea>
     :  <input 

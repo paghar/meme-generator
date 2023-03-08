@@ -61,10 +61,16 @@
     justify-content: space-between;
     align-items: center;   
     box-sizing:border-box;
+    margin:10px
+  }
+
+  .meme img{
+   max-width:100%;
   }
   
   .meme_text {  
-    inline-size: 100%;
+    max-width:100%;
+    inline-size: 100%;    
     overflow-wrap: break-word;
     hyphens: manual;
     text-align: center;   

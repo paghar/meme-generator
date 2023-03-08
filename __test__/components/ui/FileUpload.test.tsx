@@ -1,8 +1,8 @@
 import renderer from "react-test-renderer";
 import FileUpload from "../../../src/components/ui/FileUpload";
 
-describe(">>>> Button", () => {
-  test("++++ Snapshot Button", () => {
+describe(">>>> File Upload", () => {
+  test("++++ Snapshot File Upload", () => {
     const component = renderer.create(
       <FileUpload  
         btnText="File Upload"
@@ -13,5 +13,6 @@ describe(">>>> Button", () => {
     expect(tree).toMatchSnapshot();
   });
 });
+
 
 export {};

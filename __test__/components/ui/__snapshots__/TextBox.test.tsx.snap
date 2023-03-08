@@ -6,6 +6,6 @@ exports[`>>>> TextBox ++++ Snapshot TextBox 1`] = `
   onChange={[MockFunction]}
   placeholder="Insert a number"
   type="text"
-  value={23}
+  value="test"
 />
 `;

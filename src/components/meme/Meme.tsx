@@ -11,7 +11,7 @@ import {IinitialStateProps} from "../../data/interface";
 
 interface IMemeProps{ 
   state:IinitialStateProps,
-  dispatchContext:(type:MemeAction,payload:string)=>any,
+  dispatchContext:(type:MemeAction,payload:string)=>void,
   downloadMomo:()=>void,
   memoRef: React.RefObject<HTMLDivElement>,
 }
@@ -34,8 +34,7 @@ const Meme = ({
       if(isValidFileUploaded(e.target.files[0].type)){
         dispatchContext(MemeAction.SetBackgroundImage,URL.createObjectURL(e.target.files[0]));
       }      
-    }
-  
+    }  
   }); 
 
   return(
@@ -95,10 +94,12 @@ const Meme = ({
       </div>   
 
       <div className={style.row2}>
-        <Preview state={state}  ref={memoRef}/>
+        <Preview 
+          state={state}
+          ref={memoRef}
+        />
       </div>
-    
-              
+                    
     </div>
   );
 };

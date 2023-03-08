@@ -5,5 +5,51 @@ exports[`>>>> SelectBox ++++ Snapshot SelectBox 1`] = `
   id="selectBox"
   onChange={[MockFunction]}
   value=""
-/>
+>
+  <option
+    value={24}
+  >
+    24px
+  </option>
+  <option
+    value={28}
+  >
+    28px
+  </option>
+  <option
+    value={32}
+  >
+    32px
+  </option>
+  <option
+    value={36}
+  >
+    36px
+  </option>
+  <option
+    value={40}
+  >
+    40px
+  </option>
+  <option
+    value={42}
+  >
+    42px
+  </option>
+  <option
+    value={44}
+  >
+    44px
+  </option>
+  <option
+    value={48}
+  >
+    48px
+  </option>
+  <option
+    value={50}
+  >
+    50px
+  </option>
+</select>
 `;

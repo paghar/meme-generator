@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`>>>> Button ++++ Snapshot Button 1`] = `
-<select
+<button
   id="Button"
-  onChange={[MockFunction]}
-  value=""
-/>
+  onClick={[MockFunction]}
+  type="submit"
+>
+  PROCEED TO CHECKOUT
+</button>
 `;

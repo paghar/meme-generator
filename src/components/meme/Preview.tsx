@@ -7,7 +7,7 @@ interface IPreviewProps{
   state:IinitialStateProps
 }
 
-const  Preview = ({state}:IPreviewProps,ref:any) => {
+const  Preview = ({state}:IPreviewProps,ref: React.Ref<HTMLDivElement> | undefined) => {
   
   const fontName = fontItems.find((item) => item.value == parseInt(state.fontName))?.text;
 

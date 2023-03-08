@@ -3,8 +3,8 @@ import Button from "./Button";
 
 interface IProps{
   btnText:string,
-  handleChange:any,
-  className?:any
+  handleChange:(event: any)=>void,
+  className?:string,
 }
 
 export default function FileUpload({btnText,handleChange,className}:IProps) {
