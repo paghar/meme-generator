@@ -5,16 +5,15 @@ import {IinitialStateProps} from "../../data/interface";
 
 interface IPreviewProps{ 
   state:IinitialStateProps
-  memoRef:React.RefObject<HTMLDivElement>, 
 }
 
-const  Preview = ({state,memoRef}:IPreviewProps) => {
+const  Preview = ({state}:IPreviewProps,ref:any) => {
   
   const fontName = fontItems.find((item) => item.value == parseInt(state.fontName))?.text;
 
   return (  
     <div   
-      ref={memoRef}
+      ref={ref}
       className={style.meme}    
       style={{        
         fontSize:`${state.fontSize}px`,   

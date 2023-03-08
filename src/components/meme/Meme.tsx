@@ -23,10 +23,19 @@ const Meme = ({
   memoRef
 }:IMemeProps) =>{
 
-  const FileUploadChange = ((e:React.ChangeEvent<HTMLInputElement>)=>{
-    if (e.target.files) {
-      dispatchContext(MemeAction.SetBackgroundImage,URL.createObjectURL(e.target.files[0]));
+  const isValidFileUploaded=(file:string)=>{
+    const validExtensions = ["png","jpeg","jpg","gif"];
+    const fileExtension = file.split("/")[1];
+    return validExtensions.includes(fileExtension);
+  };
+
+  const FileUploadChange = ((e:React.ChangeEvent<HTMLInputElement>)=>{  
+    if (e.target.files?.length) {      
+      if(isValidFileUploaded(e.target.files[0].type)){
+        dispatchContext(MemeAction.SetBackgroundImage,URL.createObjectURL(e.target.files[0]));
+      }      
     }
+  
   }); 
 
   return(
@@ -49,7 +58,7 @@ const Meme = ({
             placeholder="Down Text"
             onChange={(e) => dispatchContext(MemeAction.SetBottomText,e.target.value)} />
           <FileUpload
-            btnText="Image Upload"
+            btnText="Image Upload (JPG / PNG / GIF)"
             handleChange={FileUploadChange}
             className={style.button} />
         </div>
@@ -86,7 +95,7 @@ const Meme = ({
       </div>   
 
       <div className={style.row2}>
-        <Preview state={state}  memoRef={memoRef}/>
+        <Preview state={state}  ref={memoRef}/>
       </div>
     
               

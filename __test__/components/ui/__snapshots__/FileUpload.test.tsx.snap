@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>> Button ++++ Snapshot Button 1`] = `
+[
+  <input
+    onChange={[MockFunction]}
+    style={
+      {
+        "display": "none",
+      }
+    }
+    type="file"
+  />,
+  <button
+    id="upload"
+    onClick={[Function]}
+    type="submit"
+  >
+    File Upload
+  </button>,
+]
+`;

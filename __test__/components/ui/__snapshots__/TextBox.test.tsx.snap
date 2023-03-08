@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>> TextBox ++++ Snapshot TextBox 1`] = `
+<input
+  id="txt1"
+  onChange={[MockFunction]}
+  placeholder="Insert a number"
+  type="text"
+  value={23}
+/>
+`;
